@@ -1,0 +1,7 @@
+{
+  "name": "fuscaAzul",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
