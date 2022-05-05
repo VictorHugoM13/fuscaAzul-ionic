@@ -10,10 +10,12 @@ import { Component, OnInit } from '@angular/core';
 export class ListarProdutosComponent implements OnInit {
 
   public produtos: Array<Produto>;
+  redClass = 'red';
   constructor(private ProdutoService: ProdutoService) { }
-
+  
   ngOnInit() {
     this.produtos = this.ProdutoService.getProdutos();
+    
   }
 
 }

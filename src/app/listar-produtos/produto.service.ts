@@ -4,19 +4,18 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class ProdutoService {
-
+export class ProdutoService{ 
   public produtos : Array<Produto> = [
-    new Produto(1425, 'Biela', 10, 10, 5),
-    new Produto(2532, 'Armortecedor', 10, 10, 5),
-    new Produto(3425, 'Pneu', 10, 10, 5),
-    new Produto(4564, 'Radiador', 10, 10, 5)
+    new Produto(1425, 'Armortecedor', 56, 110, 60),
+    new Produto(5532, 'Biela', 29, 100, 500),
+    new Produto(3425, 'Pneu', 10, 100, 2),
+    new Produto(4564, 'Radiador', 23, 50, 25)
   ]
 
-
-  constructor() { }
+  constructor() {}
+    
 
   public getProdutos(){
-    return this.produtos; 
+    return this.produtos.sort((a, b) => a.faltaDePecas - b.faltaDePecas); 
   }
 }
