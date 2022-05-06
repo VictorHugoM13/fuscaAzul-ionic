@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-buttons slot="start">
+      <ion-menu-toggle>
+      <ion-button>
+          <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-button>
+      </ion-menu-toggle>
+  </ion-buttons>
+  <ion-title>AutoPeças Fusca Azul</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen class="ion-padding">
+  <ion-text>
+    <h2>Atualizar Produtos</h2>
+  </ion-text>  
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <ion-list>
+      <ion-item>
+        <ion-label for="cod" >Codigo: </ion-label>
+        <ion-input type="text" id="cod" name="cod" [ngModel]="produto.cod" required readonly>
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label for="qtdDisponivel" >Quantidade Disponivel: </ion-label>
+        <ion-input type="number" id="qtdDisponivel" name="qtdDisponivel" [ngModel]="produto.qtdDisponivel" required readonly>
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label for="capMaxima" >Capacidade Máxima: </ion-label>
+        <ion-input type="number" id="capMaxima" name="capMaxima" [ngModel]="produto.capMaxima" required readonly>
+        </ion-input>
+      </ion-item> 
+      <ion-item>
+        <ion-label for="qtdMinima" >Quantidade Minima: </ion-label>
+        <ion-input type="number" id="qtdMinima" name="qtdMinima" [ngModel]="produto.qtdMinima" required readonly>
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label for="qtdAtualizar" >Quantidade para atualizar: </ion-label>
+        <ion-input type="number" id="qtdAtualizar" name="qtdAtualizar">
+        </ion-input>
+      </ion-item>
+      <ion-button class="ion-padding" color="success">Adicionar</ion-button>
+      <ion-button class="ion-padding" color="danger">Remover</ion-button>
+     </ion-list>  
+
+  </form>  
+</ion-content>

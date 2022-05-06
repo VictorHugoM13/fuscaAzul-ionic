@@ -13,8 +13,8 @@
 <ion-content>
   <ion-list>
     <ion-list-header> Controle de Estoque de Produtos </ion-list-header>
-    <ion-item *ngFor="let produto of produtos; index as i">    
-      <ion-label>
+    <ion-item *ngFor="let produto of produtos">    
+      <ion-label [routerLink]="['/edita-produto',produto.cod]">
         <h2 [ngClass]="{'red' : produto.red, 'orange' : produto.orange}">({{ produto.cod }}) {{ produto.descricao }} {{ produto.qtdDisponivel }}/{{ produto.capMaxima }} (min: {{ produto.qtdMinima }})</h2>
       </ion-label>
     </ion-item>

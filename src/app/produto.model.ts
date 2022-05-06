@@ -1,5 +1,5 @@
 export class Produto {
-    public cod: number;
+    public cod: string;
     public descricao: string;
     public qtdDisponivel: number;
     public capMaxima: number;
@@ -8,7 +8,7 @@ export class Produto {
     public red?: boolean;
     public orange?: boolean;
 
-    constructor(cod: number, descricao: string, qtdDisponivel: number, capMaxima: number, qtdMinima: number, faltaDePecas?: number, red?: boolean, orange?: boolean) {
+    constructor(cod: string, descricao: string, qtdDisponivel: number, capMaxima: number, qtdMinima: number, faltaDePecas?: number, red?: boolean, orange?: boolean) {
         this.cod = cod;
         this.descricao = descricao;
         this.qtdDisponivel = qtdDisponivel;

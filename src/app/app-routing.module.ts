@@ -1,3 +1,4 @@
+import { EditaProdutoComponent } from './edita-produto/edita-produto.component';
 
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
@@ -11,7 +12,12 @@ const routes: Routes = [
   {
     path: 'listar-produtos',
     component: ListarProdutosComponent
-  }
+  },
+  {
+    path: 'edita-produto/:cod',
+    component: EditaProdutoComponent
+  },
+
 ];
 
 @NgModule({
