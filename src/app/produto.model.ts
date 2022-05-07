@@ -5,15 +5,17 @@ export class Produto {
     public capMaxima: number;
     public qtdMinima: number;
     public faltaDePecas?: number;
+    public qtdAtualizar?: number;
     public red?: boolean;
     public orange?: boolean;
 
-    constructor(cod: string, descricao: string, qtdDisponivel: number, capMaxima: number, qtdMinima: number, faltaDePecas?: number, red?: boolean, orange?: boolean) {
+    constructor(cod: string, descricao: string, qtdDisponivel: number, capMaxima: number, qtdMinima: number, faltaDePecas?: number, qtdAtualizar?: number, red?: boolean, orange?: boolean) {
         this.cod = cod;
         this.descricao = descricao;
         this.qtdDisponivel = qtdDisponivel;
         this.capMaxima = capMaxima;
         this.qtdMinima = qtdMinima;
+        this.qtdAtualizar = qtdAtualizar;
         this.faltaDePecas = this.qtdDisponivel / this.qtdMinima;
         if (this.qtdDisponivel < this.qtdMinima && this.qtdDisponivel > this.capMaxima/3) {
             this.red = true;
