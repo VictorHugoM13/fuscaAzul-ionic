@@ -10,13 +10,17 @@ export class ProdutoService{
     new Produto('5532', 'Biela', 29, 100, 50),
     new Produto('3425', 'Pneu', 10, 100, 2),
     new Produto('4564', 'Carburador', 45, 50, 25),
-    new Produto('4234', 'Radiador', 23, 50, 25),
-    new Produto('6666', 'Cabeçote', 10, 30, 5)
+    new Produto('4234', 'Radiador', 30, 50, 25),
+    new Produto('6666', 'Cabeçote', 10, 30, 15)
   ]
 
   constructor() {}
  
   public getProdutos(){
+    for (let i = 0; i < this.produtos.length; i++) {
+      this.produtos[i].setColor();
+      this.produtos[i].setFaltaDePecas()
+    }
     return this.produtos.sort((a, b) => a.faltaDePecas - b.faltaDePecas); 
   }
 
